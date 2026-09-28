@@ -1,0 +1,6 @@
+Tópico: rangofest-fraud-alerts — aba Messages (Confluent Cloud)
+
+Timestamp                  | Partition | Offset | Value
+2026-09-28T16:27:26.871Z   | 3         | 3      | { "card_id": { "int": 11 }, "first_sale_id": 11, "last_sale_id": 13, "tx_count": 3, "total_amount": { "bytes": "3.00" }, "last_tx_at": { "long": 1790612811302586 } }
+2026-09-28T16:25:48.003Z   | 3         | 1      | { "card_id": { "int": 10 }, "first_sale_id": 8, "last_sale_id": 10, "tx_count": 3, "total_amount": { "bytes": "15.70" }, "last_tx_at": { "long": 1790598788221592 } }
+2026-09-28T16:25:47.541Z   | 3         | 0      | { "card_id": { "int": 10 }, "first_sale_id": 5, "last_sale_id": 7, "tx_count": 3, "total_amount": { "bytes": "15.70" }, "last_tx_at": { "long": 1790598...} }
