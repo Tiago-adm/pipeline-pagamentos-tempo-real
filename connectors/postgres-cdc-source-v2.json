@@ -1,0 +1,21 @@
+{
+  "name": "PostgresCdcSourceV2Connector_0",
+  "config": {
+    "connector.class": "PostgresCdcSourceV2",
+    "topic.prefix": "rangofest",
+    "database.hostname": "${PGHOST}",
+    "database.port": "${PGPORT}",
+    "database.dbname": "${PGDATABASE}",
+    "database.user": "${PGUSER}",
+    "database.password": "${PGPASSWORD}",
+    "database.sslmode": "require",
+    "table.include.list": "public.sales,public.cards,public.trucks",
+    "slot.name": "debezium",
+    "publication.name": "dbz_publication",
+    "publication.autocreate.mode": "disabled",
+    "snapshot.mode": "initial",
+    "output.data.format": "AVRO",
+    "output.key.format": "JSON",
+    "tasks.max": "1"
+  }
+}
