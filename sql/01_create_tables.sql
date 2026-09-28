@@ -1,0 +1,21 @@
+CREATE TABLE trucks (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  plate VARCHAR(20) UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE cards (
+  id SERIAL PRIMARY KEY,
+  holder_name VARCHAR(100) NOT NULL,
+  masked_number VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE sales (
+  id SERIAL PRIMARY KEY,
+  card_id INTEGER REFERENCES cards(id),
+  truck_id INTEGER REFERENCES trucks(id),
+  amount NUMERIC(10,2) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT now()
+);
