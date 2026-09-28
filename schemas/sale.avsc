@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Sale",
+  "namespace": "com.rangofest.payments",
+  "fields": [
+    { "name": "sale_id", "type": "string" },
+    { "name": "card_id", "type": "string" },
+    { "name": "truck_id", "type": "string" },
+    { "name": "amount", "type": { "type": "bytes", "logicalType": "decimal", "precision": 10, "scale": 2 } },
+    { "name": "created_at", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "discount_code", "type": ["null", "string"], "default": null }
+  ]
+}
